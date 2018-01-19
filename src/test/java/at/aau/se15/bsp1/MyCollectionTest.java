@@ -26,7 +26,7 @@ public class MyCollectionTest
     	c2.add("1");
         c2.add("2");
         c.remove("3");
-        assertEquals(c2,c);
+        assertEquals(c2.getList(),c.getList());
     }
     @Test(expected = IllegalArgumentException.class)
     public void testRemove2() {

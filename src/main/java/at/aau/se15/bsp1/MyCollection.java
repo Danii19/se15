@@ -31,7 +31,20 @@ public class MyCollection {
      * @param s String to remove
      */
     public void remove(String s) throws IllegalArgumentException{
-
+    	if(list.length==0) {
+    		throw new IllegalArgumentException();
+    	}
+    	boolean found=false;
+    	for(int i=0;i<list.length;i++) {
+    		if(list[i]==s) {
+    			list[i]=null;
+    			cursor--;
+    			found=true;
+    		}
+    	}
+    	if(found==false) {
+    		throw new IllegalArgumentException();
+    	}
     }
 
     /**
@@ -39,6 +52,10 @@ public class MyCollection {
      */
     public void empty() {
 
+    }
+    
+    public String[] getList() {
+    	return list;
     }
 
 }
