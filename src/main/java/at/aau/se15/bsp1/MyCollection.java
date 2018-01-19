@@ -51,7 +51,8 @@ public class MyCollection {
      * Removes all items from the list and initializes a new list
      */
     public void empty() {
-
+    	list=new String[list.length];
+    	cursor=0;
     }
     
     public String[] getList() {
