@@ -37,4 +37,11 @@ public class MyCollectionTest
     public void testRemove3() {
         c.remove("4");
     }
+    @Test
+    public void testEmpty() {
+    	MyCollection c2 = new MyCollection(5);
+        c.empty();
+        assertEquals(c2.getList(),c.getList());
+    }
+    
 }
