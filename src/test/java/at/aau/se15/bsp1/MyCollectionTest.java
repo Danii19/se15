@@ -20,4 +20,21 @@ public class MyCollectionTest
     public void testSizeSimple() {
         assertEquals(3,c.size());
     }
+    @Test
+    public void testRemove() {
+    	MyCollection c2 = new MyCollection(5);
+    	c2.add("1");
+        c2.add("2");
+        c.remove("3");
+        assertEquals(c2,c);
+    }
+    @Test(expected = IllegalArgumentException.class)
+    public void testRemove2() {
+    	MyCollection c2 = new MyCollection(5);
+        c2.remove("3");
+    }
+    @Test(expected = IllegalArgumentException.class)
+    public void testRemove3() {
+        c.remove("4");
+    }
 }
